@@ -17,6 +17,9 @@ See also:
   - Part 1: https://blog.angularindepth.com/creating-a-library-in-angular-6-87799552e7e5
   - Part 2: https://blog.angularindepth.com/creating-a-library-in-angular-6-part-2-6e2bc1e14121
 
+**Important**: you can also create and test extension libraries as part of the ACA project clone.
+See: [Redistributable libraries](https://aca-dev-docs.netlify.com/#/extending?id=redistributable-libraries) article for more details.
+
 ## Building
 
 ```sh
