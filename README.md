@@ -2,10 +2,14 @@
 
 Provides an Angular workspace setup for Alfresco Content Application (ACA) extensions.
 
-The project contains:
+Please also refer to the [Extensibility](https://alfresco.github.io/alfresco-content-app/#/extending) documentation.
+
+This project contains:
 
 - Blank Angular application
-- Simple ACA extension project
+- Simple ACA extension project featuring:
+  - Extra application route backed by custom component
+  - New side navigation link
 - Scripts to build, package and publish extension libraries
 
 You can create multiple libraries in the same workspace.
