@@ -1,27 +1,87 @@
-# ExtensionWorkspace
+# Extension Workspace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+Provides an Angular workspace setup for Alfresco Content Application (ACA) extensions.
 
-## Development server
+The project contains:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Blank Angular application
+- Simple ACA extension project
+- Scripts to build, package and publish extension libraries
 
-## Code scaffolding
+You can create multiple libraries in the same workspace.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+See also:
 
-## Build
+- **Official article**: [Library support in Angular CLI 6](https://github.com/angular/angular-cli/wiki/stories-create-library#library-support-in-angular-cli-6)
+- **Blog**: The Angular Library Series - Creating a Library with the Angular CLI
+  - Part 1: https://blog.angularindepth.com/creating-a-library-in-angular-6-87799552e7e5
+  - Part 2: https://blog.angularindepth.com/creating-a-library-in-angular-6-part-2-6e2bc1e14121
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Building
 
-## Running unit tests
+```sh
+npm run build:my-extension
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Publishing
 
-## Running end-to-end tests
+```sh
+cd dist/my-extension
+npm publish --access=public
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Testing with local ACA instance
 
-## Further help
+Build and package the extension library locally without publishing to NPM:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```sh
+npm run package:my-extension
+```
+
+The script produces the `dist/my-extension/my-extension-0.0.1.tgz` file
+that can be used to install dependency.
+
+Switch to the ACA project and run:
+
+```sh
+npm i <path>/aca-extension-example/dist/my-extension/my-extension-0.0.1.tgz
+```
+
+Update the `extensions.module.ts` file and append the module:
+
+```ts
+import { MyExtensionModule } from 'my-extension';
+
+@NgModule({
+  imports: [
+    ...,
+    MyExtensionModule
+  ]
+})
+export class AppExtensionsModule {}
+```
+
+Update the `app.extensions.json` file and register new plugin:
+
+```json
+{
+  "$schema": "../../extension.schema.json",
+  "$name": "app",
+  "$version": "1.0.0",
+  "$references": [
+    ...,
+    "my-extension.json"
+  ],
+}
+```
+
+Copy `dist/assets/my-extension.json` to the `src/assets/plugins` folder.
+
+Run the ACA application
+
+```sh
+npm start
+```
+
+Depending on the setup, you might need to log in as an administrator
+and enable external plugins feature for your local run.
