@@ -1,4 +1,4 @@
-# Extension Workspace
+# ACA Extension Example
 
 Provides an Angular workspace setup for Alfresco Content Application (ACA) extensions.
 
