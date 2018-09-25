@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { ExtensionService } from '@alfresco/adf-extensions';
+import { ExtensionService, ExtensionsModule } from '@alfresco/adf-extensions';
 
 import { MyExtensionComponent } from './my-extension.component';
 
 @NgModule({
-  imports: [],
+  imports: [ExtensionsModule],
   declarations: [MyExtensionComponent],
-  exports: [MyExtensionComponent]
+  exports: [MyExtensionComponent],
+  entryComponents: [MyExtensionComponent]
 })
 export class MyExtensionModule {
   constructor(extensions: ExtensionService) {

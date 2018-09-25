@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:my-extension": "ng build my-extension && cpr projects/my-extension/assets dist/my-extension/assets --deleteFirst"
+    "build:my-extension": "ng build my-extension && cpr projects/my-extension/assets dist/my-extension/assets --deleteFirst",
+    "pack:my-extension": "cd dist/my-extension && npm pack",
+    "package:my-extension": "npm run build:my-extension && npm run pack:my-extension"
   },
   "private": true,
   "dependencies": {
