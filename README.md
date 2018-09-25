@@ -10,6 +10,7 @@ This project contains:
 - Simple ACA extension project featuring:
   - Extra application route backed by custom component
   - New side navigation link
+- ADF dependencies (Extensions, Core and Content Services)
 - Scripts to build, package and publish extension libraries
 
 You can create multiple libraries in the same workspace.
@@ -76,7 +77,6 @@ Update the `app.extensions.json` file and register new plugin:
   "$name": "app",
   "$version": "1.0.0",
   "$references": [
-    ...,
     "my-extension.json"
   ],
 }

@@ -4,6 +4,8 @@
   "peerDependencies": {
     "@angular/common": "^6.0.0",
     "@angular/core": "^6.0.0",
-    "@alfresco/adf-extensions": "^2.6.0-ef568679d5dd3f1af9b26addc1a3a4ec133f7561"
+    "@alfresco/adf-extensions": "^2.6.0-ef568679d5dd3f1af9b26addc1a3a4ec133f7561",
+    "@alfresco/adf-content-services": "^2.5.0",
+    "@alfresco/adf-core": "^2.5.0"
   }
 }
