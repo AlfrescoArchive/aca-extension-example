@@ -9,6 +9,8 @@
     "@alfresco/adf-core": "^2.5.0"
   },
   "alfresco": {
-    "extension": "assets/my-extension.json"
+    "extension": "assets/my-extension.json",
+    "module": "MyExtensionModule",
+    "namespace": "my-extension"
   }
 }

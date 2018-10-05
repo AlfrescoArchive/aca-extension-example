@@ -33,7 +33,9 @@ if you need to specify a different extension entry point:
 ```json
 {
   "alfresco": {
-    "extension": "assets/my-extension.json"
+    "extension": "assets/my-extension.json",
+    "module": "MyExtensionModule",
+    "namespace": "my-extension"
   }
 }
 ```
