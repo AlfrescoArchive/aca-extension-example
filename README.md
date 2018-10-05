@@ -27,6 +27,19 @@ See: [Redistributable libraries](https://aca-dev-docs.netlify.com/#/extending?id
 
 ## Building
 
+Update project `package.json` (`projects/my-extension/package.json`)
+if you need to specify a different extension entry point:
+
+```json
+{
+  "alfresco": {
+    "extension": "assets/my-extension.json"
+  }
+}
+```
+
+Run the following script to build the library
+
 ```sh
 npm run build:my-extension
 ```
