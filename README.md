@@ -2,7 +2,7 @@
 
 Provides an Angular workspace setup for Alfresco Content Application (ACA) extensions.
 
-Please also refer to the [Extensibility](https://alfresco.github.io/alfresco-content-app/#/extending) documentation.
+Please also refer to the [Extensibility](https://alfresco.github.io/alfresco-content-app/#/extending/) documentation.
 
 This project contains:
 
@@ -23,7 +23,7 @@ See also:
   - Part 2: https://blog.angularindepth.com/creating-a-library-in-angular-6-part-2-6e2bc1e14121
 
 **Important**: you can also create and test extension libraries as part of the ACA project clone.
-See: [Redistributable libraries](https://aca-dev-docs.netlify.com/#/extending?id=redistributable-libraries) article for more details.
+See: [Redistributable libraries](https://alfresco.github.io/alfresco-content-app/#/extending/redistributable-libraries) article for more details.
 
 ## Building
 
